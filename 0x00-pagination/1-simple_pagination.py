@@ -55,8 +55,10 @@ class Server:
             List[List]: A list of rows for the given page, or an empty list if out of range.
         """
         # Validate arguments
-        assert isinstance(page, int) and page > 0, "Page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer"
+        assert isinstance(
+            page, int) and page > 0, "Page must be a positive integer"
+        assert isinstance(
+            page_size, int) and page_size > 0, "Page size must be a positive integer"
 
         # Retrieve dataset
         data = self.dataset()
